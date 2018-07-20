@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery停止动画</title>
+    <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#div1").click(function() {
+                $("#div2").slideDown(5000);
+            });
+            $("button").click(function() {
+                $("#div2").stop(); //停止动画的方法
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        #div1,
+        #div2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: 1px solid red;
+        }
+        
+        #div2 {
+            padding: 100px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>停止滑动</button>
+    <div id="div1">点我向下滑动</div>
+    <div id="div2">hello jQuery</div>
+</body>
+
+</html>

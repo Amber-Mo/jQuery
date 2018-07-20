@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>callback回调函数</title>
+    <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide("slow", function() { // 有回调函数，在隐藏效果完成后回调函数
+                    alert("段落被隐藏了！");
+                });
+            });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide(1000); // 无回调函数，警告框会在隐藏效果完成前弹出
+                alert("段落将被隐藏！");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>隐藏</button>
+    <p>点击隐藏按钮，我就消失啦！</p>
+</body>
+
+</html>
